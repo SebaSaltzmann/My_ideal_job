@@ -18,9 +18,6 @@ indice = 0
 mensaje_inicio = "🌟 Camino hacia el Futuro 🌟\nIngresá tu nombre para comenzar"
 indice_texto = 0
 
-
-
-
 # ----------- FUNCIONES -----------
 
 def mostrar_pantalla_inicio():
@@ -80,9 +77,9 @@ def avanzar_etapa():
     mostrar_elementos_juego()
 
     if etapa == 1:
-        texto_juego.config(text=f"Bienvenido, {nombre}. ¿Dónde querés estudiar para convertirte en un Desarrollador de IA?")
-        boton_opcion1.config(text="Universidad de Buenos Aires (UBA)", command=lambda: elegir("UBA"))
-        boton_opcion2.config(text="MIT", command=lambda: elegir("MIT"))
+        texto_juego.config(text=f"Bienvenido, {nombre}. ¿Dónde querés estudiar para convertirte en un Desarrollador de software especializado en IA?")
+        boton_opcion1.config(text="Universidad Tecnológica Nacional (UTN)", command=lambda: elegir("UTN"))
+        boton_opcion2.config(text="FaMAF", command=lambda: elegir("FaMAF"))
         boton_opcion3.config(text="Cursos online (Coursera)", command=lambda: elegir("Online"))
     elif etapa == 2:
         texto_juego.config(text="Elegí tu primer proyecto de inteligencia artificial:")
@@ -100,8 +97,8 @@ def avanzar_etapa():
 def elegir(opcion):
     global eleccion_final
     respuestas = {
-        "UBA": "📚 Estudiás en la UBA y te unís a un grupo de investigación en IA.",
-        "MIT": "🚀 Estudiás en MIT y participás en proyectos con robots inteligentes.",
+        "UTN": "📚 Estudiás en la UTN y te unís a un grupo de investigación en IA.",
+        "FaMAF": "🚀 Estudiás en MIT y participás en proyectos con robots inteligentes.",
         "Online": "💻 Completás cursos online mientras trabajás como freelancer.",
         "Chatbot": "🤖 Tu chatbot filosófico te lleva a una charla TED.",
         "Salud": "🧬 Tu IA médica salva vidas y ganás una beca.",
@@ -147,8 +144,3 @@ mostrar_pantalla_inicio()
 
 # Ejecutar ventana
 ventana.mainloop()
-
-
-
-
-
